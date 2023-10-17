@@ -5,7 +5,6 @@
 # 설치한 패키지
 
 ## React
-
 -   Create React App
 
 ## Linter/Formatter
