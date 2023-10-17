@@ -5,15 +5,13 @@ import styles from './styles.moudle.scss';
 
 const Modal = ({ show, children, onClose, cancelable = true }) => {
     useEffect(() => {
-        document.body.style.overflow = show ? 'overflow' : 'auto';
+        document.body.style.overflow = show ? 'hidden' : 'auto';
         return () => {
             document.body.style.overflow = 'auto';
         };
     }, [show]);
 
     if (show) {
-        document.body.style.overflow = 'hidden';
-
         return createPortal(
             <div className={styles.ModalContainer}>
                 <button
